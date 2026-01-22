@@ -1,0 +1,131 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project-specific: Datasets and cached data
+dataset/MMPD/
+dataset/PURE/
+dataset/UBFC-rPPG/
+dataset/UBFC-PHYS/
+dataset/VIPL/
+dataset/COHFACE/
+dataset/BP4D/
+dataset/SCAMPS/
+dataset/*_cache/
+dataset/*/
+
+# Keep data loader code and config files
+!dataset/__init__.py
+!dataset/data_loader/
+!dataset/BP4D_BigSmall_Subject_Splits/
+!dataset/*.xml
+
+# Model checkpoints and outputs
+PreTrainedModels/
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.pkl
+
+# Training outputs
+runs/
+outputs/
+logs/
+wandb/
+checkpoints/
+saved_models/
+results/
+*.log
+
+# Tensorboard
+events.out.tfevents.*
+
+# Data files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.csv
+*.mat
+*.hdf5
+*.h5
+*.npy
+*.npz
+
+# Keep specific config CSVs
+!dataset/BP4D_BigSmall_Subject_Splits/*.csv
+
+# Misc
+*.bak
+*.tmp
+*.swp
+.mypy_cache/
+.dmypy.json
+dmypy.json
