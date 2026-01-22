@@ -1,7 +1,7 @@
 BASE: ['']
 TOOLBOX_MODE: "train_and_test"      # "train_and_test"  or "only_test"
 TRAIN:
-  BATCH_SIZE: 16
+  BATCH_SIZE: 2
   EPOCHS: 30
   LR: 3e-4
   MODEL_FILE_NAME: UBFC_UBFC_UBFC_RhythmMamba
@@ -9,10 +9,10 @@ TRAIN:
   DATA:
     FS: 30
     DATASET: UBFC-rPPG
-    DO_PREPROCESS: False               # if first time, should be true
+    DO_PREPROCESS: True               # if first time, should be true
     DATA_FORMAT: NDCHW
-    DATA_PATH: "/experiment0/user/DataSet/UBFC/"          # Raw dataset path, need to be updated
-    CACHED_PATH: "../dataset/UBFC/"    # Processed dataset save path, need to be updated
+    DATA_PATH: "/mnt/e/Vscode/Rhythm Mamba/RhythmMamba/rhythm-mamba-clean/DATASET_1"          # Raw dataset path, need to be updated
+    CACHED_PATH: "./dataset/UBFC/"    # Processed dataset save path, need to be updated
     EXP_DATA_NAME: ""
     BEGIN: 0.0
     END: 0.72
@@ -36,10 +36,10 @@ VALID:
   DATA:
     FS: 30
     DATASET: UBFC-rPPG
-    DO_PREPROCESS: False                  # if first time, should be true
+    DO_PREPROCESS: True                  # if first time, should be true
     DATA_FORMAT: NDCHW
-    DATA_PATH: "/experiment0/user/DataSet/UBFC/"          # Raw dataset path, need to be updated
-    CACHED_PATH: "../dataset/UBFC/"    # Processed dataset save path, need to be updated
+    DATA_PATH: "/mnt/e/Vscode/Rhythm Mamba/RhythmMamba/rhythm-mamba-clean/DATASET_1"          # Raw dataset path, need to be updated
+    CACHED_PATH: "./dataset/UBFC/"    # Processed dataset save path, need to be updated
     EXP_DATA_NAME: ""
     BEGIN: 0.72
     END: 1.0
@@ -65,10 +65,10 @@ TEST:
   DATA:
     FS: 30
     DATASET: UBFC-rPPG
-    DO_PREPROCESS: False                    # if first time, should be true
+    DO_PREPROCESS: True                    # if first time, should be true
     DATA_FORMAT: NDCHW
-    DATA_PATH: "/experiment0/user/DataSet/UBFC/"          # Raw dataset path, need to be updated
-    CACHED_PATH: "../dataset/UBFC/"    # Processed dataset save path, need to be updated
+    DATA_PATH: "/mnt/e/Vscode/Rhythm Mamba/RhythmMamba/rhythm-mamba-clean/DATASET_1"          # Raw dataset path, need to be updated
+    CACHED_PATH: "./dataset/UBFC/"    # Processed dataset save path, need to be updated
     EXP_DATA_NAME: ""
     BEGIN: 0.72
     END: 1.0

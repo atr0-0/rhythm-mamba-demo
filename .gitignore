@@ -118,6 +118,7 @@ events.out.tfevents.*
 *.h5
 *.npy
 *.npz
+*.xmp
 
 # Keep specific config CSVs
 !dataset/BP4D_BigSmall_Subject_Splits/*.csv
@@ -129,3 +130,5 @@ events.out.tfevents.*
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+\DATASET_1
