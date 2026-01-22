@@ -5,8 +5,8 @@ This repository is a personal implementation of the RhythmMamba model for remote
 This implementation focuses on making RhythmMamba accessible and practical for personal projects by providing:
 - **Complete WSL/Linux environment setup** for Windows users (required for Mamba dependencies)
 - **Training and testing pipelines** with the lightweight UBFC-rPPG dataset
-- **Inference API and frontend demo** for uploading videos and visualizing vital signs in real-time
-- **Detailed documentation** covering environment setup, model training, and deployment
+- **Frontend rhythmMamba_demo** for uploading videos and visualizing vital signs in real-time
+- **Documentation** covering environment setup, model training, and deployment
 
 **Original Work:** Based on [RhythmMamba: Fast, Lightweight, and Accurate Remote Physiological Measurement [AAAI 2025]](https://github.com/zizheng-guo/RhythmMamba)
 
@@ -15,10 +15,8 @@ This implementation focuses on making RhythmMamba accessible and practical for p
 ## 🎯 This Implementation Adds
 
 - **WSL/Linux Setup Guide**: Complete instructions for installing Mamba dependencies (Triton, causal-conv1d, mamba-ssm) on WSL/Linux, as these are not available on Windows
-- **UBFC-rPPG Dataset Support**: Ready-to-use configs for the lightweight UBFC-rPPG Dataset 1 (8 videos)
 - **Inference API**: FastAPI endpoint for video upload and vital sign extraction
-- **Frontend Demo**: Web interface to visualize rPPG waveforms and extracted heart rate / respiration rate
-
+- **Frontend rhythmMamba_demo**: Web interface to visualize rPPG waveforms and extracted heart rate / respiration rate
 
 
 ## :wrench: Setup
@@ -42,7 +40,7 @@ Windows users must use WSL2; native Linux users can proceed directly.
 ```bash
 sudo apt update
 sudo apt install -y nvidia-cuda-toolkit build-essential ninja-build git curl wget
-nvcc --version  # Verify CUDA toolkit installation
+nvcc --version  
 ```
 
 **STEP 2: Create conda environment**
@@ -79,11 +77,11 @@ Please use config files under `./configs/infer_configs`
 
 For example, if you want to run the pre-trained model for intra-dataset on MMPD, use `python main.py --config_file ./configs/infer_configs/MMPD_RHYTHMMAMBA.yaml`
 
-**Note:** Pre-trained model checkpoints are available from the original repository or can be trained from scratch. Checkpoints will be included with the frontend demo for quick testing and inference.
+**Note:** Pre-trained model checkpoints are available from the original repository or can be trained from scratch. Checkpoints will be included with the frontend rhythmMamba_demo for quick testing and inference.
 
-## 🌐 Frontend Demo
+## 🌐 Frontend rhythmMamba_demo
 
-A web-based demo for uploading videos and extracting vital signs will be added.
+A web-based rhythmMamba_demo for uploading videos and extracting vital signs will be added.
 
 
 ## :computer: Examples of Neural Network Training
@@ -113,7 +111,7 @@ S. Bobbia, R. Macwan, Y. Benezeth, A. Mansouri, J. Dubois,
 Pattern Recognition Letters, 2017.
 ```
 
-### Intra-dataset on MMPD With RhythmMamba
+### Intra-dataset on MMPD With RhythmMamba(implemented currently)
 
 STEP 1: Download the MMPD raw data by asking the paper authors
 
