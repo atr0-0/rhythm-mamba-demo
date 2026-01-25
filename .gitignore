@@ -50,6 +50,7 @@ coverage.xml
 
 # Environments
 .env
+.env.*
 .venv
 env/
 venv/
@@ -69,6 +70,7 @@ venv.bak/
 Thumbs.db
 
 # Project-specific: Datasets and cached data
+Data/
 dataset/MMPD/
 dataset/PURE/
 dataset/UBFC-rPPG/
@@ -128,7 +130,14 @@ events.out.tfevents.*
 *.tmp
 *.swp
 .mypy_cache/
+.ruff_cache/
 .dmypy.json
 dmypy.json
 
-\DATASET_1
+DATA/
+Frontend/node_modules/
+Frontend/.next/
+Frontend/out/
+Frontend/.turbo/
+Frontend/.vercel/
+.env.local
