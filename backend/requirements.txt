@@ -1,0 +1,16 @@
+Flask==3.0.0
+flask-cors==4.0.0
+werkzeug==3.0.1
+# Core Inference
+torch
+torchvision
+opencv-python-headless
+numpy
+# Model Dependencies
+mamba-ssm==2.2.2
+causal-conv1d==1.4.0
+timm==0.9.16
+einops==0.7.0
+yacs==0.1.8
+scipy==1.11.0
+pandas==2.0.0
