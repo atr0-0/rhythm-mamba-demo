@@ -5,7 +5,7 @@ This repository is a personal implementation of the RhythmMamba model for remote
 This implementation focuses on making RhythmMamba accessible and practical for personal projects by providing:
 - **Complete WSL/Linux environment setup** for Windows users (required for Mamba dependencies)
 - **Training and testing pipelines** with the lightweight UBFC-rPPG dataset
-- **Frontend rhythmMamba_demo** for uploading videos and visualizing vital signs in real-time
+- **Frontend demo** for uploading videos and visualizing vital signs in real-time
 - **Documentation** covering environment setup, model training, and deployment
 
 **Original Work:** Based on [RhythmMamba: Fast, Lightweight, and Accurate Remote Physiological Measurement [AAAI 2025]](https://github.com/zizheng-guo/RhythmMamba)
@@ -15,8 +15,8 @@ This implementation focuses on making RhythmMamba accessible and practical for p
 ## 🎯 This Implementation Adds
 
 - **WSL/Linux Setup Guide**: Complete instructions for installing Mamba dependencies (Triton, causal-conv1d, mamba-ssm) on WSL/Linux, as these are not available on Windows
-- **Inference API**: FastAPI endpoint for video upload and vital sign extraction
-- **Frontend rhythmMamba_demo**: Web interface to visualize rPPG waveforms and extracted heart rate / respiration rate
+- **Inference API**: Flask endpoint for video upload and vital sign extraction
+- **Frontend Demo**: Web interface to visualize rPPG waveforms and extracted heart rate / respiration rate
 
 
 ## :wrench: Setup
@@ -79,9 +79,29 @@ For example, if you want to run the pre-trained model for intra-dataset on MMPD,
 
 **Note:** Pre-trained model checkpoints are available from the original repository or can be trained from scratch. Checkpoints will be included with the frontend rhythmMamba_demo for quick testing and inference.
 
-## 🌐 Frontend rhythmMamba_demo
+## 🌐 Frontend Demo (Local)
 
-A web-based rhythmMamba_demo for uploading videos and extracting vital signs will be added.
+The demo UI lives in `Frontend/` and is meant for local use with the Flask backend.
+
+### Local Run (Backend + Frontend)
+
+**Backend (WSL/Linux):**
+- `cd /mnt/<backend path>`
+- Activate your `rhythm` env
+- Install requirements: `pip install -r requirements.txt`
+- Run: `python backend/app.py`
+
+**Frontend (Windows/macOS/Linux):**
+- From `Frontend/`, run: `npm install` then `npm run dev`
+- Set `NEXT_PUBLIC_API_BASE_URL` to `http://localhost:5000`
+
+### Model Weights (Local)
+
+Place your weight files in `backend/Models/` with these exact names:
+- `Pre_built.pth` (pretrained)
+- `Self_Trained.pth` (custom)
+
+The frontend sends `model_choice=prebuilt` or `model_choice=self` to switch between them.
 
 
 ## :computer: Examples of Neural Network Training

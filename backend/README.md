@@ -42,7 +42,7 @@ Make sure your trained model is accessible from one of these locations.
 From the `backend` directory in WSL:
 
 ```bash
-cd /mnt/e/Vscode/Rhythm\ Mamba/RhythmMamba/rhythm-mamba-clean/backend
+cd /mnt/<backend path>
 conda activate rhythm
 python app.py
 ```
